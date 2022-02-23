@@ -58,7 +58,7 @@ const Home: NextPage = () => {
   const cache = useRef(
     new CellMeasurerCache({
       fixedWidth: true,
-      defaultHeight: 100,
+      defaultHeight: 142.66,
     }),
   );
   const { data, fetchNextPage } = useInfiniteQuery('poke', getPokes, {
