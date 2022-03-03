@@ -73,6 +73,7 @@ const Home: NextPage = () => {
         lastPage.next.split('?')[lastPage.next.split('?').length - 1],
       ).get('offset');
     },
+    enabled: typeof window !== 'undefined',
   });
   const render = data?.pages.flatMap(({ results }) => results);
   if (typeof window === 'undefined') return null;
