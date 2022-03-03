@@ -74,8 +74,8 @@ const Poke: NextPage = () => {
   });
   const render = data?.pages.flatMap(({ results }) => results);
   useEffect(() => {
-    if (!data?.pages.length || data.pages.length <= 1) cache.current.clearAll();
-  }, [data]);
+    if (render && !(render?.length < 20)) cache.current.clearAll();
+  }, [render]);
   if (typeof window === 'undefined') return null;
   return (
     <div>
