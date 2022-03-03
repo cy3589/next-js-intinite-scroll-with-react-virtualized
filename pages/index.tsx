@@ -1,7 +1,13 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import type {
+  //  GetServerSideProps,
+  NextPage,
+} from 'next';
 import Head from 'next/head';
-import { QueryClient, useInfiniteQuery } from 'react-query';
-import { dehydrate } from 'react-query/hydration';
+import {
+  //  QueryClient,
+  useInfiniteQuery,
+} from 'react-query';
+// import { dehydrate } from 'react-query/hydration';
 import axios from 'axios';
 import {
   InfiniteLoader,
@@ -133,12 +139,12 @@ const Home: NextPage = () => {
 export default React.memo(Home);
 
 // export default Home;
-export const getServerSideProps: GetServerSideProps = async () => {
-  const queryClient = new QueryClient();
-  await queryClient.prefetchInfiniteQuery('poke', getPokes);
-  return {
-    props: {
-      dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
-    },
-  };
-};
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const queryClient = new QueryClient();
+//   await queryClient.prefetchInfiniteQuery('poke', getPokes);
+//   return {
+//     props: {
+//       dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
+//     },
+//   };
+// };
