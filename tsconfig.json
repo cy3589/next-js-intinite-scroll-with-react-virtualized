@@ -26,6 +26,11 @@
       "@interfaces/*": ["interfaces/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../../z_o-neul-house/interfaces/InfiniteInterface.tsx"
+  ],
   "exclude": ["node_modules"]
 }
